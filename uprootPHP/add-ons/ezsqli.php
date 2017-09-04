@@ -57,12 +57,12 @@ class ezsqli
 		{
 			for($f = 0; $f < count($var); $f++)
 			{
-				$var[$f] = mysqli_real_escape_string($this-connection, htmlspecialchars($var[$f], ENT_QUOTES, 'UTF-8'));
+				$var[$f] = mysqli_real_escape_string($this->connection, htmlspecialchars($var[$f], ENT_QUOTES, 'UTF-8'));
 			}
 		}
 		else
 		{
-			$var = mysqli_real_escape_string($this-connection, htmlspecialchars($var, ENT_QUOTES, 'UTF-8'));
+			$var = mysqli_real_escape_string($this->connection, htmlspecialchars($var, ENT_QUOTES, 'UTF-8'));
 		}
 		return $var;
 	}
