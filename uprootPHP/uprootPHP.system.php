@@ -78,7 +78,7 @@ class uprootPHP
 		else if(strlen($this->dir[0]) > 0 && file_exists('pages/'.$this->dir[0].".php"))
 		{
 			$this->obStart();
-			include('pages/'.$this->url.".php");
+			include('pages/'.$this->dir[0].".php");
 			$this->obFlush();
 			return true;
 		}
