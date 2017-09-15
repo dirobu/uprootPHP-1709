@@ -1,10 +1,10 @@
 <?php
 class ezsqli
 {
-	private	$server = 'pdb3.biz.nf';
-	private	$username = '1854492_rucoy';
-	private	$password = 'sw92jgfA39104s01Q';
-	private	$database = '1854492_rucoy';
+	private	$server = '';
+	private	$username = '';
+	private	$password = '';
+	private	$database = '';
 	private $connection;
 
 	public $all;
