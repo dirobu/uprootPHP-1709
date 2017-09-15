@@ -1,10 +1,10 @@
 <?php
 class ezsqli
 {
-	private	$server = '';
-	private	$username = '';
-	private	$password = '';
-	private	$database = '';
+	private	$server = 'pdb3.biz.nf';
+	private	$username = '1854492_rucoy';
+	private	$password = 'sw92jgfA39104s01Q';
+	private	$database = '1854492_rucoy';
 	private $connection;
 
 	public $all;
@@ -16,7 +16,11 @@ class ezsqli
 
 	public function __construct()
 	{
-		$this->connection = mysqli_connect($this->server,$this->username,$this->password,$this->database);
+		$this->connection = mysqli_connect($this->server,$this->username,$this->password,$this->database) or die();
+		if(mysqli_connect_errno())
+		{
+			echo "Failed to connect to MySQL: " . mysqli_connect_error();
+		}
 	}
 	public function __destruct()
 	{
